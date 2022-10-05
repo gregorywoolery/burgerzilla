@@ -25,7 +25,8 @@ export default function SplashScreen({ navigation }: SplashProps) {
             
               <View>
                 <TouchableOpacity 
-                  style={styles.splash_button}>
+                  style={styles.splash_button}
+                  onPress={() => navigation.navigate('HOME_SCREEN')}>
                   <Text style={styles.button_text}>Buy Now</Text>
                 </TouchableOpacity>
               </View>

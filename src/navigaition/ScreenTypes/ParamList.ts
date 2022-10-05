@@ -2,7 +2,8 @@ import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
 type RootStackParamList = {
-  Splash: undefined;
+  SPLASH_SCREEN: undefined;
+  HOME_SCREEN: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
 };
@@ -11,10 +12,11 @@ type RootStackParamList = {
 // Splash Screen
 type SlashScreenNavigationProps = StackNavigationProp<
   RootStackParamList,
-  'Splash'
+  'SPLASH_SCREEN',
+  'HOME_SCREEN'
 >;
 
-type SplashScreenRouteProp = RouteProp<RootStackParamList, 'Splash'>;
+type SplashScreenRouteProp = RouteProp<RootStackParamList, 'SPLASH_SCREEN'>;
 
 export type SplashProps = {
   route?:  SplashScreenRouteProp,
