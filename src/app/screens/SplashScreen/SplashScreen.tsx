@@ -2,9 +2,10 @@ import React from 'react'
 import { ImageBackground, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import splashphoto from '../../../assets/splash-screen.jpg';
 import styles from './styles.SplashScreen';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import Ionicons from '@expo/vector-icons/Ionicons';;
+import { SplashProps } from '../../../navigaition/ScreenTypes/ParamList';
 
-export default function SplashScreen({ navigation }) {
+export default function SplashScreen({ navigation }: SplashProps) {
   return (
       <ImageBackground source={splashphoto} resizeMode="cover" style={{
         flex: 1
@@ -23,7 +24,8 @@ export default function SplashScreen({ navigation }) {
               </View>
             
               <View>
-                <TouchableOpacity style={styles.splash_button}>
+                <TouchableOpacity 
+                  style={styles.splash_button}>
                   <Text style={styles.button_text}>Buy Now</Text>
                 </TouchableOpacity>
               </View>
