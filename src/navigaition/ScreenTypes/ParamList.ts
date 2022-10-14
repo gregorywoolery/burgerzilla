@@ -1,5 +1,5 @@
-import { RouteProp } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 type RootStackParamList = {
   SPLASH_SCREEN: undefined;
@@ -23,3 +23,15 @@ export type SplashProps = {
   navigation: SlashScreenNavigationProps
 }
 
+type HomeScreenNavigationProps = StackNavigationProp<
+  RootStackParamList,
+  'SPLASH_SCREEN',
+  'HOME_SCREEN'
+>;
+
+type HomeScreenRouteProp = RouteProp<RootStackParamList, 'HOME_SCREEN'>;
+
+export type HomeScreenProps = {
+  route?:  HomeScreenRouteProp,
+  navigation: HomeScreenNavigationProps
+}

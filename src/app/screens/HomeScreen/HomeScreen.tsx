@@ -1,90 +1,54 @@
-import React from "react";
+import React from 'react';
 import {
-  Image,
+  Dimensions,
   ImageBackground,
   SafeAreaView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-} from "react-native";
-import homephoto from "../../../assets/homephoto.png";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import styles from "./styles.HomeScreen";
-import Product from "../../components/Product/Product.component";
-import Carousel from "react-native-snap-carousel";
+} from 'react-native';
+import homephoto from '../../../assets/homephoto.png';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import styles from './styles.HomeScreen';
+import Carousel from 'react-native-reanimated-carousel';
+import { HomeScreenProps } from '../../../navigaition/ScreenTypes/ParamList';
+import Product from '../../components/Product/Product.component';
 
-export default function HomeScreen({ navigation }) {
-  let _carousel: any;
-
-  const testdata = [
+export default function HomeScreen({ navigation }: HomeScreenProps) {
+  const data = [
     {
-      name: "1 Cheese Burger",
-      price: "$599",
+      name: '1 Cheese Burger',
+      price: '$599',
     },
     {
-      name: "2 Cheese Burger",
-      price: "$599",
+      name: '2 Cheese Burger',
+      price: '$555',
     },
     {
-      name: "3 Cheese Burger",
-      price: "$599",
+      name: '3 Cheese Burger',
+      price: '$566',
     },
     {
-      name: "4 Cheese Burger",
-      price: "$599",
+      name: '4 Cheese Burger',
+      price: '$577',
     },
     {
-      name: "5 Cheese Burger",
-      price: "$599",
+      name: '5 Cheese Burger',
+      price: '$588',
     },
   ];
 
-  const _renderItem = ({ item, index }) => {
+  const renderItem = ({ item, index }) => {
     return (
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          width: 130,
-        }}
-      >
-        <Image
-          source={require("../../../assets/burger1.jpg")}
-          style={{
-            height: 100,
-            width: 100,
-            borderRadius: 50,
-          }}
-        />
-        <Text
-          style={{
-            fontSize: 16,
-            fontWeight: "bold",
-            margin: 5,
-          }}
-        >
-          Cheese Burger
-        </Text>
-        <View
-          style={{
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexDirection: "row",
-            width: "100%",
-          }}
-        >
-          <Text>$599</Text>
-          <Ionicons name="heart-outline" size={20} color="red" />
-        </View>
-      </View>
+      <Product item={item}/>
     );
   };
 
   return (
     <ImageBackground
       source={homephoto}
-      resizeMode="cover"
+      resizeMode="cover"   
       style={{
         flex: 1,
       }}
@@ -115,19 +79,70 @@ export default function HomeScreen({ navigation }) {
             </View>
 
             <View style={styles.products_container}>
-              {/* <Carousel
-                loop={true}
-                loopClonesPerSide={2}
-                layout="stack"
-                ref={(c) => {
-                  _carousel = c;
-                }}
-                data={testdata}
-                renderItem={_renderItem}
-                sliderWidth={340}
-                itemWidth={280}
-                onSnapToItem={(index) => {}}
-              /> */}
+              <Carousel
+                style={{ width: '110%',}}
+                width={165}
+                height={150}
+                data={data}
+                renderItem={renderItem}
+              />
+            </View>
+            <View>
+              <View style={{
+                height: '40%',
+                marginTop: 20,
+                alignItems: 'center'
+              }}>
+                <Text style={{
+                  fontSize: 30,
+                  fontWeight: 'bold'
+                }}>Cheese Burger</Text>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 16,
+                    marginTop: 10
+                  }}
+                >Buy now our organic healthy delicious salad and burger with home delivery available.</Text>
+              </View>
+
+              <View style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+              }}>
+                <View style={{
+                  display: 'flex',
+                  flexDirection: 'row'
+                }}>
+                  <TouchableOpacity>
+                    <Text 
+                      style={{
+                        fontSize: 24
+                      }}
+                    >+</Text>
+                  </TouchableOpacity>
+                  <TextInput
+                    placeholder="0"
+                  />
+                  <TouchableOpacity>
+                    <Text 
+                      style={{
+                        fontSize: 24
+                      }}
+                    >-</Text>
+                  </TouchableOpacity>
+                </View>
+                <TouchableOpacity style={{
+                  backgroundColor: '#FECA16',
+                }}>
+                  <Text
+                    style={{
+                      color: '#fff'
+                    }}
+                  >Buy Now</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
