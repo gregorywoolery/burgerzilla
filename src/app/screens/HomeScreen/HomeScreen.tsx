@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Dimensions,
   ImageBackground,
   SafeAreaView,
   Text,
@@ -14,8 +13,14 @@ import styles from './styles.HomeScreen';
 import Carousel from 'react-native-reanimated-carousel';
 import { HomeScreenProps } from '../../../navigaition/ScreenTypes/ParamList';
 import Product from '../../components/Product/Product.component';
+import ProductSelection from '../../components/ProductSelection/ProductSelection';
+import useHomeScreen from './useHomeScreen';
 
 export default function HomeScreen({ navigation }: HomeScreenProps) {
+  const {
+    orderAmount,
+    setOrderAmount
+  } = useHomeScreen();
   const data = [
     {
       name: '1 Cheese Burger',
@@ -39,7 +44,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     },
   ];
 
-  const renderItem = ({ item, index }) => {
+  const renderItem = ({ item }) => {
     return (
       <Product item={item}/>
     );
@@ -87,63 +92,10 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
                 renderItem={renderItem}
               />
             </View>
-            <View>
-              <View style={{
-                height: '40%',
-                marginTop: 20,
-                alignItems: 'center'
-              }}>
-                <Text style={{
-                  fontSize: 30,
-                  fontWeight: 'bold'
-                }}>Cheese Burger</Text>
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    fontSize: 16,
-                    marginTop: 10
-                  }}
-                >Buy now our organic healthy delicious salad and burger with home delivery available.</Text>
-              </View>
-
-              <View style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between'
-              }}>
-                <View style={{
-                  display: 'flex',
-                  flexDirection: 'row'
-                }}>
-                  <TouchableOpacity>
-                    <Text 
-                      style={{
-                        fontSize: 24
-                      }}
-                    >+</Text>
-                  </TouchableOpacity>
-                  <TextInput
-                    placeholder="0"
-                  />
-                  <TouchableOpacity>
-                    <Text 
-                      style={{
-                        fontSize: 24
-                      }}
-                    >-</Text>
-                  </TouchableOpacity>
-                </View>
-                <TouchableOpacity style={{
-                  backgroundColor: '#FECA16',
-                }}>
-                  <Text
-                    style={{
-                      color: '#fff'
-                    }}
-                  >Buy Now</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
+            <ProductSelection 
+              orderAmount={orderAmount}
+              setOrderAmount={setOrderAmount}
+            />
           </View>
         </View>
       </SafeAreaView>

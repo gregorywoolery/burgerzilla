@@ -41,7 +41,7 @@ export default function Product({ item }) {
           justifyContent: 'space-between',
           alignItems: 'center',
           flexDirection: 'row',
-          width: '100%',
+          width: '87%',
         }}
       >
         <Text>{ item.price }</Text>

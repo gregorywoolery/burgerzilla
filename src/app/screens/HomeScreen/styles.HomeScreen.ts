@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   products_container: {
-    marginTop: 80,
+    marginTop: 100,
     width: '100%',
     height: '25%',
   },
