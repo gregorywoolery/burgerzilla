@@ -1,7 +1,7 @@
 <div align="center" id="top"> 
   <img src="./.github/app.gif" alt="Burgerzilla" />
 
-  &#xa0;
+&#xa0;
 
   <!-- <a href="https://burgerzilla.netlify.app">Demo</a> -->
 </div>
@@ -16,19 +16,13 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/gregorywoolery/burgerzilla?color=56BEB8">
 
   <img alt="License" src="https://img.shields.io/github/license/gregorywoolery/burgerzilla?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/gregorywoolery/burgerzilla?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/gregorywoolery/burgerzilla?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/gregorywoolery/burgerzilla?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
 
-<!-- <h4 align="center"> 
+<!-- <h4 align="center">
 	🚧  Burgerzilla 🚀 Under construction...  🚧
-</h4> 
+</h4>
 
 <hr> -->
 
@@ -44,17 +38,19 @@
 
 <br>
 
-## :dart: About ##
+## :dart: About
 
-Describe your project
+Hi, Burgerzilla was a pet 🐈 project that would allow user's to view the menu from a restaurant, select from the options and make their order. It was build in React Native Expo.
 
-## :sparkles: Features ##
+Please enjoy using the project template for your reactive needs 🥳
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+## :sparkles: Features
 
-## :rocket: Technologies ##
+:heavy_check_mark: Amazing Splash screen;\
+:heavy_check_mark: Scroll through menu horizontaly\
+:heavy_check_mark: Update order number;
+
+## :rocket: Technologies
 
 The following tools were used in this project:
 
@@ -63,33 +59,48 @@ The following tools were used in this project:
 - [React](https://pt-br.reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Expo](https://docs.expo.dev/)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Starting
 
 ```bash
 # Clone this project
-$ git clone https://github.com/gregorywoolery/burgerzilla
+$ git clone https://github.com/gregorywoolery/burgerzilla.git
 
 # Access
 $ cd burgerzilla
 
 # Install dependencies
-$ yarn
+$ npm install
 
 # Run the project
-$ yarn start
+# IOS
+$ npm run ios
 
-# The server will initialize in the <http://localhost:3000>
+# Android
+$ npm run android
+
+# Expo Client
+$ npm run start
+
 ```
 
-## :memo: License ##
+<div style="align-item:center;justify-content:center;">
+SplashScreen
+<img src="./images/1.png" width="128" height="80/>
+
+HomeScreen
+<img src="./images/2.png" width="128" height="80/>
+
+<div>
+
+## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
 
 Made with :heart: by <a href="https://github.com/gregorywoolery" target="_blank">Gregory Woolery</a>
 

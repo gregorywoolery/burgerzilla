@@ -19,30 +19,9 @@ import useHomeScreen from './useHomeScreen';
 export default function HomeScreen({ navigation }: HomeScreenProps) {
   const {
     orderAmount,
-    setOrderAmount
-  } = useHomeScreen();
-  const data = [
-    {
-      name: '1 Cheese Burger',
-      price: '$599',
-    },
-    {
-      name: '2 Cheese Burger',
-      price: '$555',
-    },
-    {
-      name: '3 Cheese Burger',
-      price: '$566',
-    },
-    {
-      name: '4 Cheese Burger',
-      price: '$577',
-    },
-    {
-      name: '5 Cheese Burger',
-      price: '$588',
-    },
-  ];
+    setOrderAmount,
+    predefinedMenu
+  } = useHomeScreen(navigation);
 
   const renderItem = ({ item }) => {
     return (
@@ -88,7 +67,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
                 style={{ width: '110%',}}
                 width={165}
                 height={150}
-                data={data}
+                data={predefinedMenu}
                 renderItem={renderItem}
               />
             </View>
