@@ -89,7 +89,7 @@ $ npm run start
 
 ```
 
-<img src="./images/1.png" width="190" height="350"/>
+<img src="./images/1.png" width="220" height="350"/>
 
 <img src="./images/2.png" width="190" height="350"/>
 
