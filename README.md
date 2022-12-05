@@ -89,9 +89,9 @@ $ npm run start
 
 ```
 
-<img src="./images/1.png" width="130" height="250/>
+<img src="./images/1.png" width="130" height="250"/>
 
-<img src="./images/2.png" width="130" height="350/>
+<img src="./images/2.png" width="130" height="350"/>
 
 ## :memo: License
 
