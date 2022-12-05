@@ -90,11 +90,9 @@ $ npm run start
 ```
 
 <div style="align-item:center;justify-content:center;">
-SplashScreen
-<img src="./images/1.png" width="128" height="80/>
+<img src="./images/1.png" width="130" height="300/>
 
-HomeScreen
-<img src="./images/2.png" width="128" height="80/>
+<img src="./images/2.png" width="130" height="300/>
 
 <div>
 
